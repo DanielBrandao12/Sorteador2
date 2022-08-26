@@ -16,67 +16,77 @@ novaLista.style.display = 'none'
 
 function mudarEstado() {
 
-  if (display == "none")
+  if (display == "none") {
+
     document.getElementById('load').style.display = 'block'
-  else
+  }
+  else {
     document.getElementById('load').style.display = 'none'
+  }
+
 }
 
-
 adicionar.addEventListener("click", e => {
+
   let names = nome.value;
+
   if (names === "") {
+
     alert("Preecha o campo")
+
   } else {
 
-
-
     if (array.includes(names)) {
+
       alert('Este nome já existe na lista')
       nome.value = '';
+
     } else {
+
       array.push(names)
       let tr = document.createElement('tr');
 
-      tr.innerHTML = ` <td>${names}</td>`
+      tr.innerHTML = ` <td id='list'>${names}</td>`
 
-      console.log(this.tabela.appendChild(tr))
       this.tabela.appendChild(tr)
+
       nome.value = '';
 
     }
-    
+
   }
-return array
+
+  return array
 });
 
-remove.addEventListener("click", e=>{
+remove.addEventListener("click", e => {
 
   if (array.length == 0) {
+
     alert('Lista vazia!')
-    
-  } else{
-       array.pop()
-    
-  
+
+  } else {
+
+    array.pop()
+
   }
 
-  
-
 });
-
-
 
 
 
 sorteador.addEventListener('click', e => {
+
   if (array.length <= 0) {
+
     alert('Lista vazia')
+
   } else {
+
     document.getElementById('load').style.display = 'block'
 
-
     setTimeout(function () {
+
       const sorteado = Math.floor(Math.random() * array.length);
       let tr = document.createElement('tr');
       tr.innerHTML = `<td>Parabéns ${array[sorteado]}</td>`
@@ -85,15 +95,12 @@ sorteador.addEventListener('click', e => {
       adicionar.disabled = true;
       sorteador.disabled = true;
       novaLista.style.display = 'block'
+
     }, 1000)
-
-
-
   }
 });
 
 novaLista.addEventListener('click', e => {
-
 
   document.location.reload(true)
 
