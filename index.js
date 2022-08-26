@@ -5,6 +5,7 @@ var sorteador = document.getElementById('sortear');
 var nomeSorteado = document.getElementById('sorteado');
 var tabela = document.getElementById('table')
 var novaLista = document.getElementById('novaLista');
+var remove = document.getElementById('remover');
 
 let array = [];
 
@@ -44,8 +45,23 @@ adicionar.addEventListener("click", e => {
       nome.value = '';
 
     }
-
+    
   }
+return array
+});
+
+remove.addEventListener("click", e=>{
+
+  if (array.length == 0) {
+    alert('Lista vazia!')
+    
+  } else{
+       array.pop()
+    
+  
+  }
+
+  
 
 });
 
