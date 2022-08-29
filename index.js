@@ -9,10 +9,9 @@ var remove = document.getElementById('remover');
 
 let array = [];
 
-
 document.getElementById('load').style.display = 'none'
 novaLista.style.display = 'none'
-
+remove.style.display = 'none'
 
 function mudarEstado() {
 
@@ -26,6 +25,7 @@ function mudarEstado() {
 
 }
 
+//Botão adicionar nomes a lista
 adicionar.addEventListener("click", e => {
 
   let names = nome.value;
@@ -46,35 +46,53 @@ adicionar.addEventListener("click", e => {
       array.push(names)
       let tr = document.createElement('tr');
 
-      tr.innerHTML = ` <td id='list'>${names}</td>`
+      //Esse for é para dar uma posição para o id do elemento
+      for(let i = 0;i<array.length;i++){
+        tr.innerHTML = ` <td id='list ${i}'>${names}</td>`
+      }
+      
 
       this.tabela.appendChild(tr)
 
       nome.value = '';
-
+      remove.style.display = 'block'
     }
-
+   
+    
   }
 
   return array
 });
 
+//Botão remover ultimo item adicionado
 remove.addEventListener("click", e => {
-
+ 
+ 
   if (array.length == 0) {
 
     alert('Lista vazia!')
 
   } else {
+    
+    let valor2 
 
-    array.pop()
+    let valor = document.getElementById(`list ${array.length -1}`)
+    
+    valor2 =array.pop()
+    
+    if(valor.innerText == valor2){
+      valor.parentNode.removeChild(valor)
+    }
+      
+    
+
 
   }
 
 });
 
 
-
+//Botão para sortear
 sorteador.addEventListener('click', e => {
 
   if (array.length <= 0) {
@@ -95,6 +113,7 @@ sorteador.addEventListener('click', e => {
       adicionar.disabled = true;
       sorteador.disabled = true;
       novaLista.style.display = 'block'
+      remove.style.display = 'none'
 
     }, 1000)
   }
