@@ -59,12 +59,7 @@ table {
     cursor: pointer;
 }
 
-h3 {
-    color: black;
-    text-align: center;
 
-
-}
 
 header {
     margin-top: 20px;
@@ -98,7 +93,8 @@ header {
     height: 50px;
     width: 45%;
    margin-top: 10px;
-  
+   text-align: center;
+
     background: white;
     box-shadow: 0px 5px 10px 0px black;
     border-radius: 10px;
