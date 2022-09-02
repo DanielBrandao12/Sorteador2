@@ -1,5 +1,3 @@
-
-
 body {
     width: 90%;
     margin: 0 auto;
@@ -8,11 +6,10 @@ body {
 }
 
 h1 {
-    margin-top: 10px;
-    padding: 10px;
-    text-align: center;
+    
+   
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: 50px;
+    font-size: 40px;
     color: green;
 
 
@@ -20,56 +17,60 @@ h1 {
 
 h2 {
     text-align: center;
-    font-size: 55px;
+    font-size: 25px;
 }
 
 table {
     font-size: 20px;
     font-style: oblique;
     margin-top: 25px;
-  
-    width: 90%;
+
+    width: 80%;
     height: auto;
-    
+
 }
 
 .textArea {
-    width: 70%;
-    padding: 10px;
+    width: 60%;
+   
     font-size: 35px;
     display: block;
 
+  
+    
     color: black;
-    margin-left: 80px;
-    margin-top: 10px;
+    
     border-radius: 5px;
     border: 1px solid
 }
 
 .botao {
-    width: 74%;
-    padding: 10px;
-    font-size: 35px;
+    width: 60%;
+    
+    font-size: 15px;
     display: block;
     color: black;
-    margin-left: 80px;
-    margin-top: 10px;
+   margin-top: 10px;
     border-radius: 5px;
     border: 1px solid;
     cursor: pointer;
 }
 
-
-
 header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     margin-top: 20px;
     background: white;
     border: solid 1px rgb(206, 203, 203);
     padding: 0px 20px 0px 20px;
-    height: 100px;
+    height: 70px;
+  
     box-shadow: 0px 5px 10px 0px black;
     border-radius: 10px;
 }
+
+
 
 .sorteado {
     height: 100px;
@@ -82,8 +83,9 @@ header {
 
 }
 
-.container{
+.container {
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
     margin-top: 25px;
 
@@ -92,20 +94,32 @@ header {
 .listaNome {
     height: 50px;
     width: 45%;
-   margin-top: 10px;
-   text-align: center;
+    margin-top: 10px;
+    text-align: center;
 
     background: white;
     box-shadow: 0px 5px 10px 0px black;
     border-radius: 10px;
 }
+.tabela-nomes{
+    font-size: 20px;
+    font-style: oblique;
+    margin-top: 25px;
 
+    width: 80%;
+
+    overflow: auto;
+}
 .addNomes {
-   
-    height: 570px;
-    width: 50%;
+    display: flex;
+    flex-direction: column;
+ 
+  margin-top: 10px;
+    align-items: center;
+    height: 400px;
+    width: 100%;
     background: white;
-   
+order: 2;
     box-shadow: 0px 5px 10px 0px black;
     border-radius: 10px;
 }
@@ -113,12 +127,12 @@ header {
 aside {
     display: flex;
     flex-direction: column;
-    height: 570px;
-    width: 45%;
-    
+    height:300px;
+    width: 100%;
+    margin-top: 10px;
     align-items: center;
     box-shadow: 0px 5px 10px 0px black;
-   
+
     background: white;
     border-radius: 10px;
 }
@@ -130,6 +144,95 @@ footer {
     box-shadow: 0px 5px 10px 0px black;
     background: white;
     border-radius: 10px;
+}
+
+@media(min-width: 1020px) {
+    
+    h1{
+        font-size: 50px;
+    }
+    h2 {
+        text-align: center;
+        font-size: 55px;
+    }
+    .container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-top: 25px;
+    
+    }
+
+    header {
+        margin-top: 20px;
+        background: white;
+        border: solid 1px rgb(206, 203, 203);
+        padding: 0px 20px 0px 20px;
+        height: 100px;
+        box-shadow: 0px 5px 10px 0px black;
+        border-radius: 10px;
+    }
+    .addNomes {
+        display: flex;
+        flex-direction: column;
+        
+        height: 600px;
+        width: 50%;
+        background: white;
+       
+        box-shadow: 0px 5px 10px 0px black;
+        border-radius: 10px;
+    }
+    .listaNome {
+        height: 50px;
+        width: 45%;
+       
+        text-align: center;
+    
+        background: white;
+        box-shadow: 0px 5px 10px 0px black;
+        border-radius: 10px;
+    }
+    aside {
+        display: flex;
+        flex-direction: column;
+        height: 600px;
+        width: 45%;
+    
+        align-items: center;
+        box-shadow: 0px 5px 10px 0px black;
+    order: 2;
+        background: white;
+        border-radius: 10px;
+    }
+
+    .textArea {
+        width: 70%;
+        padding: 10px;
+        font-size: 35px;
+        display: block;
+    
+        color: black;
+        margin-left: 80px;
+        margin-top: 10px;
+        border-radius: 5px;
+        border: 1px solid
+    }
+    
+    .botao {
+        width: 74%;
+        padding: 10px;
+        font-size: 35px;
+        display: block;
+        color: black;
+        margin-left: 80px;
+        margin-top: 10px;
+        border-radius: 5px;
+        border: 1px solid;
+        cursor: pointer;
+    }
+
+    
 }
 
 .loader {
