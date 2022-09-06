@@ -223,6 +223,7 @@ footer {
     .botao {
         width: 74%;
         padding: 10px;
+        height: 80px;
         font-size: 35px;
         display: block;
         color: black;
