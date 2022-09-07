@@ -107,7 +107,7 @@ sorteador.addEventListener('click', e => {
 
       const sorteado = Math.floor(Math.random() * array.length);
       let tr = document.createElement('tr');
-      tr.innerHTML = `<td>Parabéns ${array[sorteado]}</td>`
+      tr.innerHTML = `<td class="nameSorteado">Parabéns</td> <class="nameSorteado"td>${array[sorteado]}</td>`
       this.nomeSorteado.appendChild(tr)
       document.getElementById('load').style.display = 'none'
       adicionar.disabled = true;
