@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,45 +8,46 @@
     <link rel="stylesheet" href="style.css">
     <title>Sorteador</title>
 </head>
+
 <body>
-   <header>
+    <header>
         <h1>Sorteador</h1>
-   </header>
-   <section class="container">
-       <div class="addNomes">
-          
-            <h2>Adicionar nomes</h2>
-            <input type="text" class="textArea" id="name">
+    </header>
+    <section class="container">
+        <div class="addNomes">
+
+            <label for="name">Adicionar nomes</label>
+            <input type="text" class="textname" id="name">
             <input type="button" value="Adicionar" class="botao" id="add">
             <input type="button" value="Sortear" class="botao" id="sortear">
             <input type="button" value="Criar nova lista" class="botao" id="novaLista">
             <input type="button" value="Remover" class="botao" id="remover">
             <div class="sorteado" id="sorteado">
-                  <div class="loader" id="load"></div>
+                <div class="loader" id="load"></div>
             </div>
-    
-            
-       </div >
-       
-       
-       <aside>
-           <div class="listaNome">
-            <h3 class="lista">Lista de nomes</h3>
-           </div>
-           <div  class="tabela-nomes">
 
-               <table id="table" ></table>
 
-           </div>
+        </div>
 
-         
+
+        <aside>
+            <div class="listaNome">
+                <strong class="lista">Lista de nomes</strong>
+            </div>
+
+
+            <table id="table"></table>
+
+
+
         </aside>
 
-   </section>
-   
-   <footer>
+    </section>
 
-   </footer>
-   <script src="index.js"></script>
+    <footer>
+
+    </footer>
+    <script src="index.js"></script>
 </body>
+
 </html>
