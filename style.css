@@ -4,8 +4,10 @@
 
 }
 body {
+ 
+
+
    
-    width: 100vw;
     margin:0 auto;
     font-family: Arial, Helvetica, sans-serif;
    
@@ -166,7 +168,7 @@ footer {
 }
 
 
-@media(min-width: 850px) {
+@media(min-width: 450px) {
     body{
         width: 90%;
     }
@@ -200,7 +202,7 @@ footer {
         
   
         width: 50%;
-        height: 370px;
+        height: 500px;
         background: white;
     
         box-shadow: 0px 5px 10px 0px black;
@@ -223,7 +225,7 @@ footer {
         flex-direction: column;
    
         width: 45%;
-        height: 370px;
+        height:500px;
         align-items: center;
         box-shadow: 0px 5px 10px 0px black;
     order: 2;
