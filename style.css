@@ -4,7 +4,8 @@
 
 }
 body {
- 
+
+   
 
 
    
@@ -168,7 +169,7 @@ footer {
 }
 
 
-@media(min-width: 450px) {
+@media(min-width: 769px) {
     body{
         width: 90%;
     }
@@ -184,53 +185,25 @@ footer {
         flex-direction: row;
        
         margin-top: 25px;
-    
     }
 
     header {
-        margin-top: 20px;
-        background: white;
-        border: solid 1px rgb(206, 203, 203);
-        padding: 0px 20px 0px 20px;
+    
         height: 100px;
-        box-shadow: 0px 5px 10px 0px black;
-        border-radius: 10px;
+    
     }
     .addNomes {
-        display: flex;
-        flex-direction: column;
-        
-  
         width: 50%;
-        height: 500px;
-        background: white;
-    
-        box-shadow: 0px 5px 10px 0px black;
-        border-radius: 10px;
-        
+        height: 500px;        
     }
  
-    .listaNome {
-        height: 50px;
-        width: 45%;
-       
-        text-align: center;
-    
-        background: white;
-        box-shadow: 0px 5px 10px 0px black;
-        border-radius: 10px;
-    }
+
     aside {
-        display: flex;
-        flex-direction: column;
-   
+
         width: 45%;
         height:500px;
-        align-items: center;
-        box-shadow: 0px 5px 10px 0px black;
-    order: 2;
-        background: white;
-        border-radius: 10px;
+    
+        order: 2;
     }
 
   
