@@ -6,21 +6,21 @@ var nomeSorteado = document.getElementById('sorteado');
 var tabela = document.getElementById('table')
 var novaLista = document.getElementById('novaLista');
 var remove = document.getElementById('remover');
-
+var load = document.getElementById('load')
 let array = [];
 
-document.getElementById('load').style.display = 'none'
+load.style.display = 'none'
 novaLista.style.display = 'none'
 remove.style.display = 'none'
 
 function mudarEstado() {
 
-  if (display == "none") {
+  if (load.style.display == "none") {
 
-    document.getElementById('load').style.display = 'block'
+    load.style.display = 'block'
   }
   else {
-    document.getElementById('load').style.display = 'none'
+    load.style.display = 'none'
   }
 
 }
@@ -47,18 +47,18 @@ adicionar.addEventListener("click", e => {
       let tr = document.createElement('tr');
 
       //Esse for é para dar uma posição para o id do elemento
-      for(let i = 0;i<array.length;i++){
+      for (let i = 0; i < array.length; i++) {
         tr.innerHTML = ` <td id='list ${i}'>${names}</td>`
       }
-      
+
 
       this.tabela.appendChild(tr)
 
       nome.value = '';
       remove.style.display = 'block'
     }
-   
-    
+
+
   }
 
   return array
@@ -66,25 +66,25 @@ adicionar.addEventListener("click", e => {
 
 //Botão remover ultimo item adicionado
 remove.addEventListener("click", e => {
- 
- 
+
+
   if (array.length == 0) {
 
     alert('Lista vazia!')
 
   } else {
-    
-    let valor2 
 
-    let valor = document.getElementById(`list ${array.length -1}`)
-    
-    valor2 =array.pop()
-    
-    if(valor.innerText == valor2){
+    let valor2
+
+    let valor = document.getElementById(`list ${array.length - 1}`)
+
+    valor2 = array.pop()
+
+    if (valor.innerText == valor2) {
       valor.parentNode.removeChild(valor)
     }
-      
-    
+
+
 
 
   }
@@ -101,7 +101,7 @@ sorteador.addEventListener('click', e => {
 
   } else {
 
-    document.getElementById('load').style.display = 'block'
+    mudarEstado()
 
     setTimeout(function () {
 
@@ -109,7 +109,7 @@ sorteador.addEventListener('click', e => {
       let tr = document.createElement('tr');
       tr.innerHTML = `<td class="nameSorteado">Parabéns</td> <class="nameSorteado"td>${array[sorteado]}</td>`
       this.nomeSorteado.appendChild(tr)
-      document.getElementById('load').style.display = 'none'
+      mudarEstado()
       adicionar.disabled = true;
       sorteador.disabled = true;
       novaLista.style.display = 'block'
